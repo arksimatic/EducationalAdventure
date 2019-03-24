@@ -6,18 +6,21 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Scene changer. - Change scene with animation - IEnumerator ChangeScene()
+/// 
 /// ---- SINGLETON ----
 /// ---- DontDestroyOnLoad Object ----
+/// 
 /// </summary>
 ///BUG: Cutoff will be always visible if screen width-height ratio is bigger than 16:9
 public class SceneChanger : MonoBehaviour
 {
-
+    #region Variables & References
     public static SceneChanger instance;
-
     //Sprite mask for fade in/out anims
     Transform mask;
+    #endregion
 
+    #region MonoBehaviour methods
     private void Awake()
     {
         //Prepare singleton instance
@@ -37,12 +40,23 @@ public class SceneChanger : MonoBehaviour
         mask = transform.Find("Mask");
     }
 
+    //HACK: Might some small overhead
+    void Update()
+    {
+        transform.position = Camera.main.transform.position;
+    }
+
+    #endregion
+
+    #region Public methods
     //Change scene with animation
     public void ChangeScene(string scene)
     {
         StartCoroutine(ChangeSceneCoroutine(scene));
     }
+    #endregion
 
+    #region Private methods
     private IEnumerator ChangeSceneCoroutine(string scene)
     {
         yield return StartCoroutine( FadeIn());
@@ -76,5 +90,6 @@ public class SceneChanger : MonoBehaviour
         mask.localScale = new Vector3(1, 1, mask.localScale.z);
         yield return null;
     }
+    #endregion
 
 }
