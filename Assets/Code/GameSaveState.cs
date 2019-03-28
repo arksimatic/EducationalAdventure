@@ -9,7 +9,6 @@ using UnityEngine;
 [Serializable]
 public struct GameSaveState
 {
-
     //Save flags that will toggle when player completes a task
     //for example, Flags["TASK_COUNTRY_1"] = true will mean that player completed first
     //task in a country map.

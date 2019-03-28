@@ -35,7 +35,12 @@ public class StateSaver : MonoBehaviour
             DontDestroyOnLoad(instance.gameObject);
         }
 
-       TryLoadState();
+
+    }
+
+    void Start()
+    {
+        TryLoadState();
     }
 
 
@@ -52,50 +57,46 @@ public class StateSaver : MonoBehaviour
     {
 
         string JSONdata = "";
-
         try
         {
-            JSONdata = File.ReadAllText("/home/mado/save.dat");
-            stateData = JsonUtility.FromJson<GameSaveState>(JSONdata);
-            SceneManager.LoadScene(stateData.lastScene);
+            //HACK: despite having try/catch block, the statements in if crash whole editor on linux
+            if (File.Exists(Application.persistentDataPath + "/save.dat"))
+            {
+                JSONdata = File.ReadAllText(Application.persistentDataPath + "/save.dat");
+                stateData = JsonUtility.FromJson<GameSaveState>(JSONdata);
+            }
+            else
+            {
+                throw new IOException("Save file not found! Loading default scene...");
+            }
         }
         catch (IOException ioe)
         {
             //if IO error occured, load default scene and create new stateData
-            SceneManager.LoadScene(0);
             stateData = new GameSaveState();
             Debug.Log(ioe.Message);
+            return;
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             Debug.Log(e.Message);
+            return;
         }
-        finally
-        {
-
-        }
+        SceneManager.LoadScene(stateData.lastScene);
     }
 
     public void TrySaveCurrentState()
     {
         stateData.lastScene = SceneManager.GetActiveScene().name;
         string JSONdata = JsonUtility.ToJson(stateData);
-        StreamWriter fs = null;
         try
         {
-            fs = File.AppendText("/home/mado/save.dat");
-            fs.WriteLine(JSONdata);
+            File.WriteAllText(Application.persistentDataPath + "/save.dat", JSONdata);
         }
         catch (Exception e)
         {
             Debug.Log(e.Message);
         }
-        finally
-        {
-            if (fs != null)
-                fs.Close();
-        }
-
     }
 
     public void SetFlag(string flagname, bool value)
