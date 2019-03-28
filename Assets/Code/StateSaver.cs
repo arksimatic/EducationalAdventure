@@ -43,6 +43,10 @@ public class StateSaver : MonoBehaviour
         TryLoadState();
     }
 
+    void Update()
+    { 
+     
+    }
 
     //Before app will exit, save state
     void OnApplicationQuit()
