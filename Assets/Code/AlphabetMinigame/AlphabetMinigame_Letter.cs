@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,9 +21,11 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
 
     Transform container;
 
+    Action changeStateHandler;
+
 
     //Initialize this letter with character
-    public void Init(char character, Transform _container)
+    public void Init(char character, Transform _container, Action _changedStateHandler)
     {
         letterDisplay.text = character.ToString();
         representedLetter = character;
@@ -31,6 +34,7 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
 
         //Randomize some look
         backgroundImage.color = UnityEngine.Random.ColorHSV(0, 1, 0,0.5f,1,1);
+        changeStateHandler = _changedStateHandler;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -52,6 +56,7 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
             transform.position = result.gameObject.transform.position;
             embbededIn = result.gameObject.GetComponent<AlphabetMinigame_LetterSocket>();
             embbededIn.letter = this;
+            changeStateHandler();
         }
         else
         {
@@ -60,6 +65,7 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
             if (embbededIn != null)
                 embbededIn.letter = null;
             embbededIn = null;
+            changeStateHandler();
         }
 
     }
