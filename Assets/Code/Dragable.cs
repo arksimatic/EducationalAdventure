@@ -5,20 +5,20 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System;
-
+using System.Linq;
 
 [RequireComponent(typeof(EventTrigger))]
-public class Dragable : MonoBehaviour
+public class Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     void Start()
     {
-        EventTrigger trigger = GetComponent<EventTrigger>();
 
-        EventTrigger.Entry entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.Drag;
-        entry.callback.AddListener((data) => { OnDrag((PointerEventData)data); });
-        trigger.triggers.Add(entry);
 
+
+    }
+
+    public void OnBeginDrag(PointerEventData data)
+    { 
 
     }
 
@@ -36,6 +36,20 @@ public class Dragable : MonoBehaviour
             transform.position = t.position;
         }
         #endif
+    }
+
+    public void OnEndDrag(PointerEventData data)
+    {
+        Debug.Log("Dropped");
+        //Check if this object is overlapping with another object that has DragAndDropSocket script attached
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(data, results);
+        GameObject result = results.First(x => x.gameObject.GetComponent<DragAndDropSocket>()).gameObject;
+
+        if(result != null)
+        {
+            transform.position = result.transform.position;
+        }
 
 
     }
