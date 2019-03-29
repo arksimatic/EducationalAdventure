@@ -5,12 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Data/Scenes/SchoolTasks/TestDragAndDropTask.unity
-    guid: b729af6bf3fdc2b13a4b5a7352b3fe9e
+    path: Assets/Data/Scenes/SchoolTasks/school_alphabet_task.unity
+    guid: f5e948f89b68ba51dad62913493b77ac
   - enabled: 1
     path: Assets/Data/Scenes/school_scene.unity
     guid: d39a77656dfd115ebbbddfdb63361b08

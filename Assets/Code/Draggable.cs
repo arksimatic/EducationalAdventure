@@ -41,16 +41,6 @@ public class Draggable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     public void OnEndDrag(PointerEventData data)
     {
 
-        //Check if this object is overlapping with another object that has DragAndDropSocket script attached
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(data, results);
-        RaycastResult result = results.FirstOrDefault(x => x.gameObject.GetComponent<DragAndDropSocket>());
-
-
-        if (result.gameObject != null)
-        {
-            transform.position = result.gameObject.transform.position;
-        }
 
 
     }
