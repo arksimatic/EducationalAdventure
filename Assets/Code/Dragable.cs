@@ -18,16 +18,16 @@ public class Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     }
 
     public void OnBeginDrag(PointerEventData data)
-    { 
+    {
 
     }
 
     public void OnDrag(PointerEventData data)
     {
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         //Since we operate on UI, we can simply set position to screen touch coords
         transform.position = Input.mousePosition;
-        #elif UNITY_ANDROID
+#elif UNITY_ANDROID
         //Sanity check
         if(Input.touchCount > 0)
         {
@@ -35,20 +35,21 @@ public class Dragable : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
             //Since we operate on UI, we can simply set position to screen touch coords
             transform.position = t.position;
         }
-        #endif
+#endif
     }
 
     public void OnEndDrag(PointerEventData data)
     {
-        Debug.Log("Dropped");
+
         //Check if this object is overlapping with another object that has DragAndDropSocket script attached
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(data, results);
-        GameObject result = results.First(x => x.gameObject.GetComponent<DragAndDropSocket>()).gameObject;
+        RaycastResult result = results.FirstOrDefault(x => x.gameObject.GetComponent<DragAndDropSocket>());
 
-        if(result != null)
+
+        if (result.gameObject != null)
         {
-            transform.position = result.transform.position;
+            transform.position = result.gameObject.transform.position;
         }
 
 
