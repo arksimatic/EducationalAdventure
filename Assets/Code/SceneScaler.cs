@@ -4,7 +4,6 @@ using UnityEngine;
 
 
 //Scales this gameobject to fit camera viewport
-//Needs to have 
 public class SceneScaler : MonoBehaviour
 {
 

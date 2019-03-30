@@ -11,13 +11,13 @@ using UnityEngine.SceneManagement;
 /// ---- DontDestroyOnLoad Object ----
 /// 
 /// </summary>
-///BUG: Cutoff will be always visible if screen width-height ratio is bigger than 16:9
+///BUG: Cutoff will be visible if screen is big
 public class SceneChanger : MonoBehaviour
 {
     #region Variables & References
     public static SceneChanger instance;
     //Sprite mask for fade in/out anims
-    Transform mask;
+    Transform fader;
     #endregion
 
     #region MonoBehaviour methods
@@ -26,7 +26,7 @@ public class SceneChanger : MonoBehaviour
         //Prepare singleton instance
         if (instance != null)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
@@ -37,7 +37,7 @@ public class SceneChanger : MonoBehaviour
 
     private void Start()
     {
-        mask = transform.Find("Mask");
+        fader = transform.Find("Fader");
     }
 
     //HACK: Might some small overhead
@@ -50,6 +50,7 @@ public class SceneChanger : MonoBehaviour
 
     #region Public methods
     //Change scene with animation
+
     public void ChangeScene(string scene)
     {
         StartCoroutine(ChangeSceneCoroutine(scene));
@@ -59,7 +60,7 @@ public class SceneChanger : MonoBehaviour
     #region Private methods
     private IEnumerator ChangeSceneCoroutine(string scene)
     {
-        yield return StartCoroutine( FadeIn());
+        yield return StartCoroutine(FadeIn());
         SceneManager.LoadScene(scene);
         yield return StartCoroutine(FadeOut());
         yield return null;
@@ -69,25 +70,25 @@ public class SceneChanger : MonoBehaviour
     IEnumerator FadeIn()
     {
         //100 iterations, of 0.01f sec duration, so 1 sec total
-        while (mask.localScale.x >= 0 && mask.localScale.y >= 0)
+        while (fader.localScale.x >= 0 && fader.localScale.y >= 0)
         {
-            mask.localScale = new Vector3(mask.localScale.x - 0.01f, mask.localScale.y - 0.01f, mask.localScale.z);
-            yield return new WaitForSeconds(0.01f);
+            fader.localScale = new Vector3(fader.localScale.x - 0.01f, fader.localScale.y - 0.01f, fader.localScale.z);
+            yield return new WaitForSeconds(0.005f);
         }
         //End with setting xy to 0, to avoid floating point precision problems
-        mask.localScale = new Vector3(0, 0, mask.localScale.z);
+        fader.localScale = new Vector3(0, 0, fader.localScale.z);
         yield return null;
     }
 
     IEnumerator FadeOut()
     {
-        while (mask.localScale.x <= 1 && mask.localScale.y <= 1)
+        while (fader.localScale.x <= 2 && fader.localScale.y <= 2)
         {
-            mask.localScale = new Vector3(mask.localScale.x + 0.01f, mask.localScale.y + 0.01f, mask.localScale.z);
-            yield return new WaitForSeconds(0.01f);
+            fader.localScale = new Vector3(fader.localScale.x + 0.01f, fader.localScale.y + 0.01f, fader.localScale.z);
+            yield return new WaitForSeconds(0.001f);
         }
         //End with setting xy to 1, to avoid floating point precision problems
-        mask.localScale = new Vector3(1, 1, mask.localScale.z);
+        fader.localScale = new Vector3(2f, 2f, fader.localScale.z);
         yield return null;
     }
     #endregion
