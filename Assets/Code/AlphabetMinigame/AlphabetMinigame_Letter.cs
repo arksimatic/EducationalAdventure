@@ -55,6 +55,12 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
             //set position to socket position, to achieve "snap" effect
             transform.position = result.gameObject.transform.position;
             embbededIn = result.gameObject.GetComponent<AlphabetMinigame_LetterSocket>();
+            //If there is already a letter in place, throw it to unused letter container
+            if(embbededIn.letter != null)
+            {
+                embbededIn.letter.embbededIn = null;
+                embbededIn.letter.transform.SetParent(container);
+            }
             embbededIn.letter = this;
             changeStateHandler();
         }
