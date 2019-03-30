@@ -4,6 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/unity-ui-extensions/*
 # Visual Studio cache directory
 .vs/
 

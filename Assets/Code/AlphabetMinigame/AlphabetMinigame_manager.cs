@@ -28,7 +28,7 @@ public class AlphabetMinigame_manager : MonoBehaviour
 
 
 
-
+        //Todo: randomize filled up leters
         //1. randomize already filled in letters, count depends on difficulty setting
 
 
@@ -64,8 +64,10 @@ public class AlphabetMinigame_manager : MonoBehaviour
 
     void Win()
     {
-        //Todo: Win!
+        //Todo: Win screen?
         Debug.Log("Win");
+        SceneChanger.instance.ChangeScene("school_scene");
+        StateSaver.instance.SetFlag("minigame_alphabet", true);
     }
 
 
