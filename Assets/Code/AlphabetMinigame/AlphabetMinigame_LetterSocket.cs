@@ -19,6 +19,9 @@ public class AlphabetMinigame_LetterSocket : MonoBehaviour
 
     private AlphabetMinigame_Letter letter;
 
+    [SerializeField]
+    ParticleSystem[] particles = new ParticleSystem[2];
+
     List<Image> images = new List<Image>();
 
     void Start()
@@ -39,10 +42,13 @@ public class AlphabetMinigame_LetterSocket : MonoBehaviour
         else if(Letter.representedLetter == ExpectedLetter)
         {
             images.ForEach(x => x.color = Color.green);
+            particles[0].Play();
         }
         else if (Letter.representedLetter != ExpectedLetter)
         {
             images.ForEach(x => x.color = Color.red);
+            particles[1].Play();
+
         }
     }
 }

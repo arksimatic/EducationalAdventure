@@ -23,6 +23,9 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
 
     Action changeStateHandler;
 
+    [SerializeField]
+    ParticleSystem[] particles = new ParticleSystem[2];
+
 
     //Initialize this letter with character
     public void Init(char character, Transform _container, Action _changedStateHandler)
