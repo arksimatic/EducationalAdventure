@@ -66,7 +66,7 @@ public class AlphabetMinigame_manager : MonoBehaviour
     {
         //Todo: Win screen?
         Debug.Log("Win");
-        SceneChanger.instance.ChangeScene("school_scene");
+        SceneChanger.instance.ChangeSceneOnWin("school_scene");
         StateSaver.instance.SetFlag("minigame_alphabet", true);
     }
 
