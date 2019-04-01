@@ -23,6 +23,9 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
 
     Action changeStateHandler;
 
+    [SerializeField]
+    ParticleSystem[] particles = new ParticleSystem[2];
+
 
     //Initialize this letter with character
     public void Init(char character, Transform _container, Action _changedStateHandler)
@@ -52,10 +55,20 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
 
         if (result.gameObject != null)
         {
+            if (embbededIn != null)
+                embbededIn.Letter = null;
+            embbededIn = null;
+
             //set position to socket position, to achieve "snap" effect
             transform.position = result.gameObject.transform.position;
             embbededIn = result.gameObject.GetComponent<AlphabetMinigame_LetterSocket>();
-            embbededIn.letter = this;
+            //If there is already a letter in place, throw it to unused letter container
+            if(embbededIn.Letter != null)
+            {
+                embbededIn.Letter.embbededIn = null;
+                embbededIn.Letter.transform.SetParent(container);
+            }
+            embbededIn.Letter = this;
             changeStateHandler();
         }
         else
@@ -63,7 +76,7 @@ public class AlphabetMinigame_Letter : MonoBehaviour, IEndDragHandler, IBeginDra
             //return object to unused letter container
             transform.SetParent(container);
             if (embbededIn != null)
-                embbededIn.letter = null;
+                embbededIn.Letter = null;
             embbededIn = null;
             changeStateHandler();
         }

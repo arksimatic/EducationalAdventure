@@ -53,9 +53,9 @@ public class AlphabetMinigame_manager : MonoBehaviour
     //called when socket values have been updated
     void OnStateChanged()
     {
-        if (sockets.All(x => x.letter != null) == true)
+        if (sockets.All(x => x.Letter != null) == true)
         {
-            if(sockets.All(x=>x.letter.representedLetter == x.ExpectedLetter) == true)
+            if(sockets.All(x=>x.Letter.representedLetter == x.ExpectedLetter) == true)
             {
                 Win();
             }
