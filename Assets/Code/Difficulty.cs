@@ -8,11 +8,17 @@ using UnityEngine.SceneManagement;
 
 
 //Class describing difficulty setting
-[CreateAssetMenu(fileName = "difficulty", menuName = "Game Data/DifficultySetting")]
-public class Difficulty : ScriptableObject
+public static class Difficulty 
 {
-    public string name = "";
-    public List<SceneCollection> minigames = new List<SceneCollection>();
+    public static DIFFICULTY diff;
 }
+
+public enum DIFFICULTY
+{ 
+    EASY = 1,
+    MEDIUM = 2, 
+    HARD = 3,
+}
+
 
 
