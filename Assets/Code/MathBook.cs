@@ -20,12 +20,12 @@ public class MathBook : MonoBehaviour
     private string s;
     private string[] fields;
 
-    StreamReader reader;
+    StringReader reader;
 
     //Scieszka do pliku z zadaniami 
-    private string MathPathEasy = "Assets/Resources/MathBookEasy.txt";
-    private string MathPathMedium = "Assets/Resources/MathBookMedium.txt";
-    private string MathPathHard = "Assets/Resources/MathBookHard.txt";
+    private readonly string MathPathEasy = "MathBookEasy";
+    private readonly string MathPathMedium = "MathBookMedium";
+    private readonly string MathPathHard = "MathBookHard";
     private string MathPath = null;
 
     private void Awake()
@@ -33,18 +33,18 @@ public class MathBook : MonoBehaviour
         //Sprawdzanie Poziomu trudności
         if(Difficulty.diff == DIFFICULTY.EASY )
         {
-            MathPath = MathPathEasy;
+            MathPath = Resources.Load<TextAsset>(MathPathEasy).text;
         }
         else if(Difficulty.diff == DIFFICULTY.MEDIUM)
         {
-            MathPath = MathPathMedium;
+            MathPath = Resources.Load<TextAsset>(MathPathMedium).text;
         }
         else
         {
-            MathPath = MathPathHard;
+            MathPath = Resources.Load<TextAsset>(MathPathHard).text;
         }
 
-        reader = new StreamReader(MathPath);
+        reader = new StringReader(MathPath);
 
         //Aktywacja książki
         calculations.gameObject.SetActive(true);
