@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class MathBook : MonoBehaviour
 {
-    //Do Pawła , nie miałem lepszego pomysłu na refy do nich 
-    [SerializeField]
-    private Button StartMathButton;
+    
+    //[SerializeField]
+    //private Button StartMathButton;
 
     [SerializeField]
     private GameObject NumPad;
@@ -25,7 +26,7 @@ public class MathBook : MonoBehaviour
 
     StreamReader reader;
 
-    //Scieszka do pliku z zadaniami
+    //Scieszka do pliku z zadaniami                                   <--Dodać różne poziomy trudności 
     private string MathPath = "Assets/Resources/MathBook.txt";
 
     private void Awake()
@@ -34,11 +35,10 @@ public class MathBook : MonoBehaviour
         reader = new StreamReader(MathPath);
 
         //Aktywacja książki
-        calculations.gameObject.SetActive(false);
-        NumPad.SetActive(false);
-        StartMathButton.gameObject.SetActive(true);
-        answerText.gameObject.SetActive(false);
-
+        calculations.gameObject.SetActive(true);
+        NumPad.SetActive(true);
+        answerText.gameObject.SetActive(true);
+        SeeOnScreen();
         answerText.text = " ";
     }
 
@@ -48,7 +48,7 @@ public class MathBook : MonoBehaviour
         //Aktywacja answerText, NumPad, calculationText
         calculations.gameObject.SetActive(true);
         NumPad.SetActive(true);
-        StartMathButton.gameObject.SetActive(false);
+        //StartMathButton.gameObject.SetActive(false);
         answerText.gameObject.SetActive(true);
 
         Debug.Log("Is Clicked");
@@ -58,7 +58,7 @@ public class MathBook : MonoBehaviour
     //Wyświetlanie zadania + zakonczenie questa
     private void SeeOnScreen()
     {
-        char[] delimiter = { ' ' };
+        char[] delimiter = { '=' };
         s = reader.ReadLine();
        
         //Sprawdzanie czy to już ostatnie zadanie
@@ -66,16 +66,17 @@ public class MathBook : MonoBehaviour
         {
             //Wyświetlanie zadania
             fields = s.Split(delimiter);
-            calculations.text = fields[0] + fields[1] + fields[2] + fields[3];
+            calculations.text = fields[0] + "=" ;
         }
         else
         {
-            //Zakończenie questa
+            //Zakończenie questa                                <------ zmiana sceny spowrotem
             calculations.gameObject.SetActive(false);
             NumPad.SetActive(false);
-            StartMathButton.gameObject.SetActive(true);
+            //StartMathButton.gameObject.SetActive(true);
             answerText.gameObject.SetActive(false);
             Debug.Log("Off Math");
+            SceneManager.LoadScene("school_scene", LoadSceneMode.Single);
             reader.Close();
         }
     }
@@ -94,7 +95,7 @@ public class MathBook : MonoBehaviour
         int answerFromFile = 0;
 
         //Ze stringa do inta
-        int.TryParse(fields[4], out answerFromFile);
+        int.TryParse(fields[1], out answerFromFile);
         int.TryParse(answerText.text, out answerInt);
 
         //Poprawna odpowiedz
