@@ -36,12 +36,7 @@ public class AlphabetMinigame_manager : MonoBehaviour
         new char[] {'L', 'Ł'}};
 
 
-        //Todo: randomize filled up leters
-        //1. randomize already filled in letters, count depends on difficulty setting
-
-        Difficulty.diff = DIFFICULTY.HARD;
-
-        //3. Instantiate all letters, those filled in, go to the respective sockets, those not go into unsued letter container
+        //Instantiate all letters, those filled in, go to the respective sockets, those not go into unsued letter container
         //Go through A to Z plus add polish letters in between
         for (int i = 65; i <= 90; i++)
         {
@@ -64,7 +59,7 @@ public class AlphabetMinigame_manager : MonoBehaviour
             }
         }
 
-        //4. At the end scramble alphabet letters in unused letter container
+        //At the end scramble alphabet letters in unused letter container
 
         for (int i = 0; i < 10; i++)
         {
