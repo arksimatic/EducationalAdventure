@@ -7,10 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class MathBook : MonoBehaviour
 {
-    
-    //[SerializeField]
-    //private Button StartMathButton;
-
     [SerializeField]
     private GameObject NumPad;
 
@@ -26,12 +22,28 @@ public class MathBook : MonoBehaviour
 
     StreamReader reader;
 
-    //Scieszka do pliku z zadaniami                                   <--Dodać różne poziomy trudności 
-    private string MathPath = "Assets/Resources/MathBook.txt";
+    //Scieszka do pliku z zadaniami 
+    private string MathPathEasy = "Assets/Resources/MathBookEasy.txt";
+    private string MathPathMedium = "Assets/Resources/MathBookMedium.txt";
+    private string MathPathHard = "Assets/Resources/MathBookHard.txt";
+    private string MathPath = null;
 
     private void Awake()
     {
-        
+        //Sprawdzanie Poziomu trudności
+        if(Difficulty.diff == DIFFICULTY.EASY )
+        {
+            MathPath = MathPathEasy;
+        }
+        else if(Difficulty.diff == DIFFICULTY.MEDIUM)
+        {
+            MathPath = MathPathMedium;
+        }
+        else
+        {
+            MathPath = MathPathHard;
+        }
+
         reader = new StreamReader(MathPath);
 
         //Aktywacja książki
@@ -40,19 +52,6 @@ public class MathBook : MonoBehaviour
         answerText.gameObject.SetActive(true);
         SeeOnScreen();
         answerText.text = " ";
-    }
-
-    //Start event
-    public void ClickOnBook()
-    {
-        //Aktywacja answerText, NumPad, calculationText
-        calculations.gameObject.SetActive(true);
-        NumPad.SetActive(true);
-        //StartMathButton.gameObject.SetActive(false);
-        answerText.gameObject.SetActive(true);
-
-        Debug.Log("Is Clicked");
-        SeeOnScreen();
     }
 
     //Wyświetlanie zadania + zakonczenie questa
@@ -70,7 +69,8 @@ public class MathBook : MonoBehaviour
         }
         else
         {
-            //Zakończenie questa                                <------ zmiana sceny spowrotem
+            
+            //Zakończenie questa                                
             calculations.gameObject.SetActive(false);
             NumPad.SetActive(false);
             //StartMathButton.gameObject.SetActive(true);
