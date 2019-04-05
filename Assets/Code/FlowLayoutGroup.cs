@@ -23,7 +23,8 @@ namespace UnityEngine.UI.Extensions
 
 		public bool ChildForceExpandWidth = false;
 		public bool ChildForceExpandHeight = false;
-		public bool invertOrder = false;
+        public bool ChildForceShrinkToFit = false;
+        public bool invertOrder = false;
 		private float _layoutHeight;
 		private float _layoutWidth;
 
@@ -107,7 +108,6 @@ namespace UnityEngine.UI.Extensions
 		/// <summary>
 		/// Main layout method
 		/// </summary>
-		/// <param name="width">Width to calculate the layout with</param>
 		/// <param name="axis">0 for horizontal axis, 1 for vertical</param>
 		/// <param name="layoutInput">If true, sets the layout input for the axis. If false, sets child position for axis</param>
 		public float SetLayout(int axis, bool layoutInput)
@@ -120,7 +120,9 @@ namespace UnityEngine.UI.Extensions
 			float spacingBetweenElements = 0;
 			float offset = 0;
 			float counterOffset = 0;
-			float groupSize = 0;
+            //How big is the layout container in start axis
+            float groupSize = 0;
+            //How big is the layout container after using the paddings
 			float workingSize = 0;
 			if (startAxis == Axis.Horizontal) {
 				groupSize = groupHeight;
