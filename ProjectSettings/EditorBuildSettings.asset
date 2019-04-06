@@ -5,22 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Data/Scenes/SchoolTasks/MathQuestBook.unity
-    guid: e2767b860c1deb6439e28790bb6b5ee8
-  - enabled: 1
-    path: Assets/Data/Scenes/SchoolTasks/school_alphabet_task.unity
-    guid: f5e948f89b68ba51dad62913493b77ac
-  - enabled: 1
-    path: Assets/Data/Scenes/school_scene.unity
-    guid: d39a77656dfd115ebbbddfdb63361b08
-  - enabled: 1
-    path: Assets/Data/Scenes/country_scene.unity
-    guid: ea30371c0b9847cc7889a8e9b672d846
-  - enabled: 1
-    path: Assets/Data/Scenes/mountains_scene.unity
-    guid: 7ec111e63945c30708c3076dae3900ed
-  - enabled: 1
-    path: Assets/Data/Scenes/ocean_scene.unity
-    guid: deac4cb92af175e37b6f0360ef8071f3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
