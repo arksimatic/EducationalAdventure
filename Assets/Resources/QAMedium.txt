@@ -1,0 +1,5 @@
+Czy to jest Medium ?1
+Prawda ?1
+Prawda ?1
+Fa³sz ?0
+Fa³sz ?0

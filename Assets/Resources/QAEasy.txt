@@ -1,0 +1,5 @@
+Czy lubie mas³o ?1
+Czy nie lubiê mas³a ?0
+Czy konie maj¹ rogi ?0
+Czy mój brat jest zjebem ?1
+Czy kokos to owoc ?1 
