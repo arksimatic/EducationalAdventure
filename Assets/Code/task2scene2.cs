@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class task2scene2 : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class task2scene2 : MonoBehaviour
     private readonly string QAHard = "QAHard";
     private string QAPath = null;
     #endregion
+
+    #region Others functions
     private void Awake()
     {
         //Check level of difficulty
@@ -36,18 +39,13 @@ public class task2scene2 : MonoBehaviour
             QAPath = Resources.Load<TextAsset>(QAMedium).text;
         }
         else
-        { 
+        {
             QAPath = Resources.Load<TextAsset>(QAHard).text;
         }
 
         reader = new StringReader(QAPath);
 
         ReadFromFile();
-        //Test
-        //question1.GetComponentInChildren<Text>().text = "Mam to";
-        //question1.GetComponentInChildren<Button>().GetComponentInChildren<Text>().text = "MAM";
-        //question1.GetComponentInChildren<Button.f>().
-
     }
 
     private void ReadFromFile()
@@ -56,21 +54,63 @@ public class task2scene2 : MonoBehaviour
 
         int i = 0;
 
+        //Repeat as long as we had fields to show question
         foreach (GameObject obj in objects)
         {
             s = reader.ReadLine();
-            //fields = s.Split(delimiter);
-            Debug.Log(s);    //<---                 tu zwraca null
-            obj.GetComponentInChildren<Text>().text = s;
-            //fileAnswer[i] = int.Parse(fields[1]);
-            i++;
+
+            //Check count of question
+            if (s != null)
+            {
+                fields = s.Split(delimiter);
+                obj.GetComponentInChildren<Text>().text = fields[0] + '?';
+                fileAnswer[i] = int.Parse(fields[1]);
+                Debug.Log("Odpowiedź pliku " + i + "  : " + fileAnswer[i]);
+                i++;
+            }
+            //if isn't enough, question = base text
+            else
+            {
+                obj.GetComponentInChildren<Text>().text = "Brak pytania, odpowiedź Prawda";
+                fileAnswer[i] = 1;
+                i++;
+            }
         }
         reader.Close();
     }
+    #endregion
 
     #region Button functions 
-    public void CheckAnswer()
+    //Check how much is Bad answers and set it on Text 
+    public void CheckAnswer(Text NrOfBadAnswer)
     {
+        int badanswer = 0;
+
+        //How much is bad answers
+        for (int i = 0; i < fileAnswer.Length; i++)
+        {
+            if (fileAnswer[i] != playerAnswer[i])
+            {
+                badanswer++;
+            }
+        }
+
+        //If all answers are correct go to sea scene
+        if (badanswer == 0)
+        {
+            SceneManager.LoadScene("ocean_scene", LoadSceneMode.Single);
+        }
+        else
+        {
+            if (badanswer == 1)
+            {
+                NrOfBadAnswer.text = badanswer.ToString() + " Błędna odpowiedź";
+            }
+            else
+            {
+                NrOfBadAnswer.text = badanswer.ToString() + " Błędnych odpowiedzi";
+            }
+        }
 
     }
     //Take string with two numbers, first - nr question     secound - true(1) or false(0)
@@ -79,14 +119,14 @@ public class task2scene2 : MonoBehaviour
         int nr, answer;
 
         //String to int 
-        int.TryParse(""+a[0], out nr);
-        int.TryParse(""+a[1], out answer);
+        int.TryParse("" + a[0], out nr);
+        int.TryParse("" + a[1], out answer);
 
         //Array wtih player answers 
-        playerAnswer[nr-1] = answer;
+        playerAnswer[nr - 1] = answer;
 
         Debug.Log("Pytanie nr " + nr + " jest  : " + answer);
-        Debug.Log(playerAnswer[nr-1]);
+        Debug.Log(playerAnswer[nr - 1]);
     }
     #region TrueButtons Colors
     public void TrueButtonChangeFalse(Button FalseButton)
