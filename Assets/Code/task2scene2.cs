@@ -7,29 +7,19 @@ using System.IO;
 public class task2scene2 : MonoBehaviour
 {
     #region Variebles
-    [SerializeField]
-    GameObject question1;
 
     [SerializeField]
-    GameObject question2;
-
-    [SerializeField]
-    GameObject question3;
-
-    [SerializeField]
-    GameObject question4;
-
-    [SerializeField]
-    GameObject question5;
+    List<GameObject> objects;
 
     private int[] playerAnswer = new int[5] { 2, 2, 2, 2, 2 };
     private int[] fileAnswer = new int[5];
 
-    private string Question; 
+    private string[] fields;
+    private string s;
 
     StringReader reader;
 
-    private readonly string QAEasy = "QAEassy";
+    private readonly string QAEasy = "QAEasy";
     private readonly string QAMedium = "QAMedium";
     private readonly string QAHard = "QAHard";
     private string QAPath = null;
@@ -46,22 +36,36 @@ public class task2scene2 : MonoBehaviour
             QAPath = Resources.Load<TextAsset>(QAMedium).text;
         }
         else
-        {
+        { 
             QAPath = Resources.Load<TextAsset>(QAHard).text;
         }
 
         reader = new StringReader(QAPath);
 
+        ReadFromFile();
         //Test
-        question1.GetComponentInChildren<Text>().text = "Mam to";
-        question1.GetComponentInChildren<Button>().GetComponentInChildren<Text>().text = "MAM";
+        //question1.GetComponentInChildren<Text>().text = "Mam to";
+        //question1.GetComponentInChildren<Button>().GetComponentInChildren<Text>().text = "MAM";
         //question1.GetComponentInChildren<Button.f>().
 
     }
 
     private void ReadFromFile()
     {
+        char[] delimiter = { '?' };
 
+        int i = 0;
+
+        foreach (GameObject obj in objects)
+        {
+            s = reader.ReadLine();
+            //fields = s.Split(delimiter);
+            Debug.Log(s);    //<---                 tu zwraca null
+            obj.GetComponentInChildren<Text>().text = s;
+            //fileAnswer[i] = int.Parse(fields[1]);
+            i++;
+        }
+        reader.Close();
     }
 
     #region Button functions 
@@ -74,14 +78,15 @@ public class task2scene2 : MonoBehaviour
     {
         int nr, answer;
 
+        //String to int 
         int.TryParse(""+a[0], out nr);
         int.TryParse(""+a[1], out answer);
-        //nr--;
 
-        playerAnswer[nr] = answer;
+        //Array wtih player answers 
+        playerAnswer[nr-1] = answer;
 
         Debug.Log("Pytanie nr " + nr + " jest  : " + answer);
-        Debug.Log(playerAnswer[nr]);
+        Debug.Log(playerAnswer[nr-1]);
     }
     #region TrueButtons Colors
     public void TrueButtonChangeFalse(Button FalseButton)

@@ -531,7 +531,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 174269253}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TakeAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 30
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: FalseButtonChangeSelf
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 174269252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: FalseButtonChangeTrue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1287365904}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &174269253
@@ -687,7 +720,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 310040990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TakeAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 51
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TrueButtonChangeFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 504807788}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TrueButtonChangeSelf
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 310040989}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &310040990
@@ -1083,7 +1149,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 398478329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TakeAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 41
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TrueButtonChangeFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1141091068}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TrueButtonChangeSelf
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 398478328}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &398478329
@@ -1201,7 +1300,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 504807789}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TakeAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 50
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: FalseButtonChangeSelf
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 504807788}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: FalseButtonChangeTrue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 310040989}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &504807789
@@ -1364,11 +1496,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c97df61e399f746897296f1777d1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question1: {fileID: 172954226}
-  question2: {fileID: 332052355}
-  question3: {fileID: 1632318425}
-  question4: {fileID: 261040596}
-  question5: {fileID: 1778998112}
+  objects:
+  - {fileID: 172954226}
+  - {fileID: 332052355}
+  - {fileID: 1632318425}
+  - {fileID: 261040596}
+  - {fileID: 1778998112}
 --- !u!1 &590062658
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,7 +1659,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 928716977}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TakeAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 21
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TrueButtonChangeFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1140172505}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TrueButtonChangeSelf
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 928716976}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &928716977
@@ -1920,7 +2086,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1140172506}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TakeAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 20
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: FalseButtonChangeSelf
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1140172505}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: FalseButtonChangeTrue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 928716976}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1140172506
@@ -2038,7 +2237,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1141091069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TakeAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 40
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: FalseButtonChangeSelf
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1141091068}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: FalseButtonChangeTrue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 398478328}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1141091069
@@ -2235,7 +2467,40 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1287365905}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TakeAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 31
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TrueButtonChangeFalse
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 174269252}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 578960643}
+        m_MethodName: TrueButtonChangeSelf
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1287365904}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1287365905
