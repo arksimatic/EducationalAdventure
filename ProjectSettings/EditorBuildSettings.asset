@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Data/Scenes/SchoolTasks/MathQuestBook.unity
+    path: Assets/Data/Scenes/SchoolTasks/MathQuest.unity
     guid: e2767b860c1deb6439e28790bb6b5ee8
   - enabled: 1
     path: Assets/Data/Scenes/SchoolTasks/AlphabetMinigame.unity
