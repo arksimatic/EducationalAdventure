@@ -8,8 +8,6 @@ using UnityEngine.Networking;
 
 public class GoToPointScript : MonoBehaviour
 {
-
-
     public Transform target;
     public float speed = 20;
     private PathFinding pathfinding;
@@ -17,8 +15,8 @@ public class GoToPointScript : MonoBehaviour
     private int targetIndex = 0;
     private Vector3 targetCheck;
     private Vector2[] directions;
-    private bool prociding = false;
-    public bool tourEnd=false;
+    private bool proceeding = false;
+    public bool tourEnd = false;
 
 
     void Start()
@@ -32,7 +30,7 @@ public class GoToPointScript : MonoBehaviour
     void Update()
     {
         TargetCheck();
-        if (prociding == false)
+        if (proceeding == false)
         {
 
             OnPath(pathfinding.FindPath(transform.position, target.position));
@@ -43,54 +41,40 @@ public class GoToPointScript : MonoBehaviour
 
     void TargetCheck()
     {
-        if (targetCheck.x == target.position.x && targetCheck.y == target.position.y)
+        if (Math.Abs(targetCheck.x - target.position.x) < 0.001f && Math.Abs(targetCheck.y - target.position.y) < 0.001f)
         {
-            prociding = true;
-
+            proceeding = true;
+            return;
         }
-        else
-            prociding = false;
-
+        proceeding = false;
     }
 
     public void OnPath(List<Node> newPath)
     {
-
-
-        
         targetCheck = target.transform.position;
         Path = newPath;
         targetIndex = 0;
         directions = Directions(Path);
         StopCoroutine("FollowPath");
         StartCoroutine("FollowPath");
-
-
-
     }
 
     public Vector2[] Directions(List<Node> path)// tworzy pkt po ktorych porusza sie postac 
     {
         List<Vector2> waypoints = new List<Vector2>();
-
         for (int i = 0; i < path.Count; i++)
         {
-
             waypoints.Add(path[i].worldPosition);
-
         }
-
         return waypoints.ToArray();
-
     }
 
     IEnumerator FollowPath() /// chodzonko przeskakuje po waypointach
     {
-
         Vector2 currentWaypoint = directions[0];
         while (true)
         {
-            if (transform.position.x == (currentWaypoint.x) && transform.position.y == (currentWaypoint.y))
+            if (Math.Abs(transform.position.x - (currentWaypoint.x)) < 0.001f && Math.Abs(transform.position.y - (currentWaypoint.y)) < 0.001f)
             {
                 targetIndex++;
 
@@ -106,25 +90,6 @@ public class GoToPointScript : MonoBehaviour
 
             transform.position = Vector2.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
             yield return null;
-
         }
     }
-
-
-
-
-
-    /* 
-    void GetCloser(Vector2 Pos, Vector2 Target)// niby fajne ale nie potrzebne jednak wiec skomentowalem
-    {
-
-        RaycastHit2D hit = Physics2D.Raycast(Pos, Target,2.0f);
-        if (hit.collider == null)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, Target, speed * Time.deltaTime);
-        }
-
-
-    }
-}*/
 }

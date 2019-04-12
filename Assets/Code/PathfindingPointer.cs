@@ -8,7 +8,9 @@ public class PathfindingPointer : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Point"))
+        //Note: this should also work on mobile devices
+        //TODO: check functionality on mobile devices
+        if (Input.GetMouseButtonDown(0))
         {
             Move();
             
@@ -26,7 +28,7 @@ public class PathfindingPointer : MonoBehaviour
     {
         
     
-         SceneStarter quest = hitInfo.GetComponent<SceneStarter>();
+         QuestStarter quest = hitInfo.GetComponent<QuestStarter>();
          if (quest != null)
          {
              quest.Starter(transform.position);

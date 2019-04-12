@@ -44,5 +44,7 @@ public class SceneScaler : MonoBehaviour
         this.transform.localScale *= scaleMultiplier;
 
 
+
+
     }
 }
