@@ -8,6 +8,8 @@ using UnityEngine.Networking;
 
 public class GoToPointScript : MonoBehaviour
 {
+    public Animator animator;
+
     public Transform target;
     public float speed = 20;
     private PathFinding pathfinding;
@@ -19,9 +21,9 @@ public class GoToPointScript : MonoBehaviour
     public bool tourEnd = false;
 
 
+
     void Start()
     {
-
         pathfinding = GameObject.Find("Astar").GetComponent<PathFinding>();
         targetCheck = target.transform.position;
         OnPath(pathfinding.FindPath(transform.position, target.position));
@@ -44,6 +46,7 @@ public class GoToPointScript : MonoBehaviour
         if (Math.Abs(targetCheck.x - target.position.x) < 0.001f && Math.Abs(targetCheck.y - target.position.y) < 0.001f)
         {
             proceeding = true;
+            animator.SetBool("moving", true);
             return;
         }
         proceeding = false;
@@ -89,6 +92,7 @@ public class GoToPointScript : MonoBehaviour
             }
 
             transform.position = Vector2.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+            animator.SetBool("moving", false);
             yield return null;
         }
     }

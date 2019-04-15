@@ -14,10 +14,10 @@ TagManager:
   - 
   - 
   - PathfindingCollider
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Midground
+  - Foreground
+  - Hero
   - 
   - 
   - 
@@ -40,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1783809461
+    locked: 0
+  - name: Sherlock
+    uniqueID: 2757277127
+    locked: 0
+  - name: Midground
+    uniqueID: 1914183209
+    locked: 0
+  - name: Foreground
+    uniqueID: 4096401527
     locked: 0
