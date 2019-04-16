@@ -76,7 +76,7 @@ public class MathBook : MonoBehaviour
             //StartMathButton.gameObject.SetActive(true);
             answerText.gameObject.SetActive(false);
             Debug.Log("Off Math");
-            SceneManager.LoadScene("school_scene", LoadSceneMode.Single);
+            SceneChanger.instance.ChangeSceneOnWin("school_scene");
             reader.Close();
         }
     }

@@ -18,14 +18,15 @@ public class CheckIfCorrect : MonoBehaviour
                 SettingPhrases.j[score+1] = SettingPhrases.m[score+1];
                 GetComponent<SettingPhrases>().DrawEveryone();
                 score += 1;
-            if (score > 14)
+                if (score > 14)
                 {
                     Debug.Log("End of this mini game");
+                    SceneChanger.instance.ChangeSceneOnWin("school_scene");
                 }
             }
             else
             {
-                Debug.Log("Sorry, not this wae..."); //no points for kiddo :<
+                Debug.Log("Sorry, not this way..."); //no points for kiddo :<
                 //displayThis.text = Input.text;
         }
     }
