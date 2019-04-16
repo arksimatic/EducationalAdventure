@@ -92,6 +92,9 @@ public class GoToPointScript : MonoBehaviour
             }
 
             transform.position = Vector2.MoveTowards(transform.position, currentWaypoint, speed * Time.deltaTime);
+            Vector2 movementDirection = new Vector2(transform.position.x - currentWaypoint.x, transform.position.y - currentWaypoint.y);
+            movementDirection.Normalize();
+            animator.SetFloat("dir_x", movementDirection.x);
             animator.SetBool("moving", false);
             yield return null;
         }
