@@ -84,9 +84,27 @@ public class MathBook : MonoBehaviour
     //Pobieranie odpowiedzi do answerText
     public void TakeAnswer(string score)
     {
-        answer += score;
-        answerText.text = answer;
+            answer += score;
+            answerText.text = answer;
+
+        if (answer.Length >= 6)
+        {
+            answer = answer.Remove(answer.Length - 1, 1);
+            answerText.text = answer;
+        }
     }
+
+    //Usuwanie ostatniego znaku z odpowiedzi
+    public void DeleteLastNumber()
+    {
+        int count = answer.Length;
+        
+        if (count > 0 )
+        {
+            answer = answer.Remove(count - 1, 1);
+            answerText.text = answer;
+        }
+     }
 
     //Sprawdzanie odpowiedzi
     public void CheckAnswer()
