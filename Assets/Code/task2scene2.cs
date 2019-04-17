@@ -12,8 +12,8 @@ public class task2scene2 : MonoBehaviour
     [SerializeField]
     List<GameObject> objects;
 
-    private int[] playerAnswer = new int[5] { 2, 2, 2, 2, 2 };
-    private int[] fileAnswer = new int[5];
+    private int[] playerAnswer;
+    private int[] fileAnswer;
 
     private string[] fields;
     private string s;
@@ -51,7 +51,7 @@ public class task2scene2 : MonoBehaviour
     private void ReadFromFile()
     {
         char[] delimiter = { '?' };
-
+        string answers = null;
         int i = 0;
 
         //Repeat as long as we had fields to show question
@@ -64,17 +64,27 @@ public class task2scene2 : MonoBehaviour
             {
                 fields = s.Split(delimiter);
                 obj.GetComponentInChildren<Text>().text = fields[0] + '?';
-                fileAnswer[i] = int.Parse(fields[1]);
-                Debug.Log("Odpowiedź pliku " + i + "  : " + fileAnswer[i]);
+                answers += fields[1];
                 i++;
             }
-            //if isn't enough, question = base text
+            //if isn't enough questions , disactive buttons and text 
             else
             {
-                obj.GetComponentInChildren<Text>().text = "Brak pytania, odpowiedź Prawda";
-                fileAnswer[i] = 1;
+                obj.SetActive(false);
                 i++;
             }
+
+        }
+
+        //Define arrays of answers
+        fileAnswer = new int[answers.Length];
+        playerAnswer = new int[answers.Length];
+
+        //from answers string to array int
+        for (int j = 0; j < answers.Length; j++)
+        {
+            fileAnswer[j] = int.Parse(answers[j].ToString());
+            Debug.Log(j + "tak " + fileAnswer[j]);
         }
         reader.Close();
     }
@@ -85,7 +95,7 @@ public class task2scene2 : MonoBehaviour
     public void CheckAnswer(Text NrOfBadAnswer)
     {
         int badanswer = 0;
-
+                                                                       //<-- Ze stringa do playerAnswers
         //How much is bad answers
         for (int i = 0; i < fileAnswer.Length; i++)
         {
