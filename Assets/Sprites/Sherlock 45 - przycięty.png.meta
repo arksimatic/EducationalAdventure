@@ -1,0 +1,541 @@
+fileFormatVersion: 2
+guid: 9b246f02ddaaf6b429af290c5c6d83a2
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "Sherlock 45 - przyci\u0119ty_0"
+    21300002: "Sherlock 45 - przyci\u0119ty_1"
+    21300004: "Sherlock 45 - przyci\u0119ty_2"
+    21300006: "Sherlock 45 - przyci\u0119ty_3"
+    21300008: "Sherlock 45 - przyci\u0119ty_4"
+    21300010: "Sherlock 45 - przyci\u0119ty_5"
+    21300012: "Sherlock 45 - przyci\u0119ty_6"
+    21300014: "Sherlock 45 - przyci\u0119ty_7"
+    21300016: "Sherlock 45 - przyci\u0119ty_8"
+    21300018: "Sherlock 45 - przyci\u0119ty_9"
+    21300020: "Sherlock 45 - przyci\u0119ty_10"
+    21300022: "Sherlock 45 - przyci\u0119ty_11"
+    21300024: "Sherlock 45 - przyci\u0119ty_12"
+    21300026: "Sherlock 45 - przyci\u0119ty_13"
+    21300028: "Sherlock 45 - przyci\u0119ty_14"
+    21300030: "Sherlock 45 - przyci\u0119ty_15"
+    21300032: "Sherlock 45 - przyci\u0119ty_16"
+    21300034: "Sherlock 45 - przyci\u0119ty_17"
+    21300036: "Sherlock 45 - przyci\u0119ty_18"
+    21300038: "Sherlock 45 - przyci\u0119ty_19"
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_0"
+      rect:
+        serializedVersion: 2
+        x: 64.043915
+        y: 1525.7452
+        width: 557.88684
+        height: 595.29114
+      alignment: 9
+      pivot: {x: 0.4991264, y: 0.50102335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68013c1ae5677043ac99d11cd059a9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_1"
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1951
+        width: 70
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3a658a139e67243a13bd1e1def8b1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_2"
+      rect:
+        serializedVersion: 2
+        x: 1019.2831
+        y: 1367.8041
+        width: 369.07825
+        height: 752.4376
+      alignment: 9
+      pivot: {x: 0.5004817, y: 0.49731156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99510c7094f9a7d408b74352c86c53c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_3"
+      rect:
+        serializedVersion: 2
+        x: 2095.4744
+        y: 1719.2073
+        width: 210.37842
+        height: 330.70728
+      alignment: 9
+      pivot: {x: 0.49684578, y: 0.498305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31ff21049001d74a8fd562ea0a5690a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_4"
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1872
+        width: 112
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c1a5d1b0266b4479c0df6a8cdf671a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_5"
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1794
+        width: 58
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc549f8a4ff10ba499178ce241e9a797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_6"
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 1702
+        width: 104
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025f386e861da5147b12717c174f5644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_7"
+      rect:
+        serializedVersion: 2
+        x: 690.55597
+        y: 1596.0001
+        width: 156.90973
+        height: 57
+      alignment: 9
+      pivot: {x: 0.5031179, y: 0.50000215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412d630bfbfc13949b2e7e84d9050553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_8"
+      rect:
+        serializedVersion: 2
+        x: 669.7773
+        y: 1360.207
+        width: 199.15723
+        height: 163.9397
+      alignment: 9
+      pivot: {x: 0.49570242, y: 0.49587116}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf36382fe348a314abb4db964da88747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_9"
+      rect:
+        serializedVersion: 2
+        x: 2110.4648
+        y: 1322.2073
+        width: 240.83594
+        height: 290.61902
+      alignment: 9
+      pivot: {x: 0.4963344, y: 0.4965013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ed7cd1bbcb2ab45af9b60e215ee0b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_10"
+      rect:
+        serializedVersion: 2
+        x: 205.07285
+        y: 972.2071
+        width: 232.8208
+        height: 330.70746
+      alignment: 9
+      pivot: {x: 0.4979244, y: 0.49830416}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563cad1477d7fee498531a277231ba70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_11"
+      rect:
+        serializedVersion: 2
+        x: 647.3955
+        y: 672.2071
+        width: 199.15723
+        height: 523.1319
+      alignment: 9
+      pivot: {x: 0.49008763, y: 0.4985224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700ab2054cf5f67469e112be2ef2f24f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_12"
+      rect:
+        serializedVersion: 2
+        x: 1497.8545
+        y: 646.2071
+        width: 181.52405
+        height: 548.7885
+      alignment: 9
+      pivot: {x: 0.49385053, y: 0.49890423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b6b1b3e38755142b26be64177795d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_13"
+      rect:
+        serializedVersion: 2
+        x: 2160.433
+        y: 1043.2072
+        width: 138.24219
+        height: 178.37146
+      alignment: 9
+      pivot: {x: 0.4887574, y: 0.4949956}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771f324778982ee4abddcd03f70be42f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_14"
+      rect:
+        serializedVersion: 2
+        x: 172.09383
+        y: 509.2071
+        width: 203.9663
+        height: 325.89685
+      alignment: 9
+      pivot: {x: 0.49717137, y: 0.49798855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea44395bdd256e4f804cfec9ea9c6d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_15"
+      rect:
+        serializedVersion: 2
+        x: 642.3986
+        y: 149.20708
+        width: 179.9209
+        height: 414.0913
+      alignment: 9
+      pivot: {x: 0.4896673, y: 0.49938962}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428129a8618965842ba2472a7aa7642e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_16"
+      rect:
+        serializedVersion: 2
+        x: 1523.8379
+        y: 129.20708
+        width: 155.87561
+        height: 434.93738
+      alignment: 9
+      pivot: {x: 0.49181673, y: 0.49844632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9027d0e54e55f54bbf010ae4f21eccb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_17"
+      rect:
+        serializedVersion: 2
+        x: 171.09447
+        y: 236.2071
+        width: 136.63918
+        height: 167.14665
+      alignment: 9
+      pivot: {x: 0.49331042, y: 0.4953312}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca9aa3d027837345924b3a7229d0915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_18"
+      rect:
+        serializedVersion: 2
+        x: 931.6107
+        y: 177.20709
+        width: 272.89648
+        height: 125.45468
+      alignment: 9
+      pivot: {x: 0.49795178, y: 0.4925516}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20651de213ad86498aaf70edffbb0bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sherlock 45 - przyci\u0119ty_19"
+      rect:
+        serializedVersion: 2
+        x: 1887.6064
+        y: 129.20708
+        width: 236.02686
+        height: 130.26527
+      alignment: 9
+      pivot: {x: 0.49525532, y: 0.49355406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6e179eaa104114593e0a7e51777c0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b17e3dba88705b84f8f2088e91428734
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 636900903344680024
+  assetBundleName: 
+  assetBundleVariant: 

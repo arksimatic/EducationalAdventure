@@ -30,7 +30,6 @@ public class SceneScaler : MonoBehaviour
         }
 
         //Rescale this gameobject to match camera rect size
-
         Vector2 topleft = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
         Vector2 bottomright = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0f));
 
@@ -42,6 +41,8 @@ public class SceneScaler : MonoBehaviour
 
 
         this.transform.localScale *= scaleMultiplier;
+
+
 
 
     }

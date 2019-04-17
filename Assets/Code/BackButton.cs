@@ -11,6 +11,5 @@ public class BackButton : MonoBehaviour
     public void OnClick()
     {
         SceneChanger.instance.ChangeScene(scene_name);
-
     }
 }

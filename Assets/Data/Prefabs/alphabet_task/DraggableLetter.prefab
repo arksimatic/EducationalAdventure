@@ -82,6 +82,9 @@ MonoBehaviour:
   letterDisplay: {fileID: 4107814722024208941}
   backgroundImage: {fileID: 5205931690891740681}
   representedLetter: 33
+  particles:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &7963916784473009341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,11 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: 50
-  m_MinHeight: 125
-  m_PreferredWidth: 150
-  m_PreferredHeight: 150
-  m_FlexibleWidth: 50
-  m_FlexibleHeight: 50
+  m_MinHeight: 50
+  m_PreferredWidth: 125
+  m_PreferredHeight: 125
+  m_FlexibleWidth: 100
+  m_FlexibleHeight: 100
   m_LayoutPriority: 1
 --- !u!1 &4107814722024208939
 GameObject:
