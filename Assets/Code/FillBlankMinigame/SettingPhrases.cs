@@ -11,7 +11,7 @@ public class SettingPhrases : MonoBehaviour
     public static string[] m = new string[150];
     public static string word = null;
     public static string txt = null;
-
+    public static int neededScore;
 
     //TODO: Add new difficulty levels
     public static readonly string[] difficulties = new string[] { "klasa1", "klasa1", "klasa1" };
@@ -27,17 +27,19 @@ public class SettingPhrases : MonoBehaviour
         char[] charArr = text.ToCharArray();
         word = null;
         int h = 1;
+        neededScore = 0;
         foreach (char ch in charArr)
         {
             if(ch=='_')
             {
+                neededScore++;
                 word = System.String.Format(word + j[h]);
-                Debug.Log(h);
+                //Debug.Log(h);
                 h++;}
             else
             { word += System.String.Join("", ch); }
         }
-
+        Debug.Log("Needed score" + neededScore);
         Word.text = word;
     }
 
@@ -49,18 +51,14 @@ public class SettingPhrases : MonoBehaviour
 
     void Start()
     {
-
-
         string anwsers = Resources.Load<TextAsset>(difficulties[(int)Difficulty.diff] + "odp").text;
-
-
 
         StringReader readerodp = new StringReader(anwsers);
         m[0] = "a";
         for (int i = 1; m[i-1] != null; i++)
         {
             m[i] = readerodp.ReadLine();
-            Debug.Log(i + "m");
+            //Debug.Log(i + "m");
         }
         readerodp.Close();
 
@@ -71,5 +69,6 @@ public class SettingPhrases : MonoBehaviour
 
         readerodp.Close();
         Draw(Word);
+
     }
 }
