@@ -16,9 +16,16 @@ public class JigsawPuzzlePiece : MonoBehaviour, IEndDragHandler, IBeginDragHandl
 
     JigsawPuzzleSocket embbededIn;
 
-    Transform container;
+    Transform parentbuffer = null;
+
+    Transform unusedContainer;
 
     Action changeStateHandler;
+
+    public void SetUnusedContainer(Transform _unusedContainer)
+    {
+        unusedContainer = _unusedContainer;
+    }
 
     public void SetChangeStateHandler(Action _handler)
     {
@@ -27,7 +34,8 @@ public class JigsawPuzzlePiece : MonoBehaviour, IEndDragHandler, IBeginDragHandl
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        transform.SetParent(container.parent);
+        parentbuffer = transform.parent;
+        transform.SetParent(unusedContainer.parent);
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -37,35 +45,58 @@ public class JigsawPuzzlePiece : MonoBehaviour, IEndDragHandler, IBeginDragHandl
         EventSystem.current.RaycastAll(eventData, results);
         RaycastResult result = results.FirstOrDefault(x => x.gameObject.GetComponent<JigsawPuzzleSocket>());
 
-
+        //If something was hit...
         if (result.gameObject != null)
         {
-            if (embbededIn != null)
-                embbededIn.Piece = null;
-            embbededIn = null;
 
-            //set position to socket position, to achieve "snap" effect
-            transform.position = result.gameObject.transform.position;
+            //Nullify to ensure no hanging references
+            if (embbededIn != null)
+            {
+                embbededIn.Piece = null;
+            }
+
             embbededIn = result.gameObject.GetComponent<JigsawPuzzleSocket>();
-            //If there is already a piece in place, throw it to unused piece container
+
+            //If there is already a piece in place, exchange parents
             if (embbededIn.Piece != null)
             {
+               
+                transform.SetParent(embbededIn.transform);
+                transform.position = embbededIn.transform.position;
+
                 embbededIn.Piece.embbededIn = null;
-                embbededIn.Piece.transform.SetParent(container);
+                embbededIn.Piece.transform.SetParent(parentbuffer);
+                embbededIn.Piece.transform.position = parentbuffer.transform.position;
+
+                if (parentbuffer.GetComponent<JigsawPuzzleSocket>())
+                {
+                    parentbuffer.GetComponent<JigsawPuzzleSocket>().Piece = embbededIn.Piece;
+                    embbededIn.Piece.embbededIn = parentbuffer.GetComponent<JigsawPuzzleSocket>();
+                }
+
             }
+            else
+            {
+                Debug.Log("ELSE");
+                //set position to socket position, to achieve "snap" effect
+                transform.position = result.gameObject.transform.position;
+                //set parent
+                transform.SetParent(result.gameObject.transform);
+            }
+            //Set fields
+           
             embbededIn.Piece = this;
-            changeStateHandler();
         }
         else
         {
             //return object to unused letter container
-            transform.SetParent(container);
+            transform.SetParent(unusedContainer);
             if (embbededIn != null)
                 embbededIn.Piece = null;
             embbededIn = null;
-            changeStateHandler();
         }
 
+        changeStateHandler();
     }
 }
 

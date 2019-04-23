@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1957931448816670882}
   - component: {fileID: 1957931448816670883}
   - component: {fileID: 1957931448816670880}
+  - component: {fileID: 5122665698544407201}
   m_Layer: 5
   m_Name: PuzzleSocket
   m_TagString: Untagged
@@ -87,3 +88,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c8154594e7792e19303d275148a4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExcpectedPuzzleID: -1
+--- !u!114 &5122665698544407201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957931448816670886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -405508275, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
