@@ -60,7 +60,6 @@ public class AlphabetMinigame_manager : MonoBehaviour
         }
 
         //At the end scramble alphabet letters in unused letter container
-
         for (int i = 0; i < 10; i++)
         {
             foreach (AlphabetMinigame_Letter l in letters)
@@ -68,9 +67,6 @@ public class AlphabetMinigame_manager : MonoBehaviour
                 l.transform.SetSiblingIndex(UnityEngine.Random.Range(0, letters.Count - 1));
             }
         }
-
-
-
     }
 
 
