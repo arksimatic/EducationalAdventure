@@ -5397,6 +5397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467426964}
   - component: {fileID: 467426963}
+  - component: {fileID: 467426965}
   m_Layer: 0
   m_Name: StateSaver
   m_TagString: Untagged
@@ -5411,7 +5412,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467426962}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fd8382a577a369dba7aae1ac0cb93f0, type: 3}
   m_Name: 
@@ -5430,6 +5431,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &467426965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467426962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54eabfdb92da5b59f66da89069aa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flags:
+  - minigame_alphabet
+  - minigame_mathbook
+  - minigame_fillgaps
+  NextSceneName: "ocean_scene\x13"
 --- !u!1 &469991961
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,25 +17,25 @@ public class StateSaver : MonoBehaviour
 {
 
     #region Variables & References
-    public static StateSaver instance = null;
+    public static StateSaver instance;
     GameSaveState stateData;
     #endregion
 
     #region MonoBehaviour methods
     private void Awake()
     {
+      
         //Prepare singleton instance
         if (instance != null)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
             instance = this;
+            stateData = new GameSaveState();
             DontDestroyOnLoad(instance.gameObject);
         }
-
-
     }
 
     void Start()
@@ -44,8 +44,8 @@ public class StateSaver : MonoBehaviour
     }
 
     void Update()
-    { 
-     
+    {
+
     }
 
     //Before app will exit, save state
@@ -59,7 +59,6 @@ public class StateSaver : MonoBehaviour
     #region Public Methods
     public void TryLoadState()
     {
-
         string JSONdata = "";
         try
         {
@@ -86,6 +85,7 @@ public class StateSaver : MonoBehaviour
             Debug.Log(e.Message);
             return;
         }
+
         SceneManager.LoadScene(stateData.lastScene);
     }
 
@@ -114,6 +114,35 @@ public class StateSaver : MonoBehaviour
             stateData.Flags.Add(flagname, value);
         }
 
+    }
+
+
+    /// <summary>
+    /// Gets the flag value.
+    /// </summary>
+    /// <returns><c>true</c>, if flag was gotten, <c><paramref name="defaultFailureReturn"/></c> otherwise.</returns>
+    /// <param name="flagname">Name of the flag of which value should be returned</param>
+    /// <param name="defaultFailureReturn">Sets whichever value should be returned on retrive failure</param>
+    public bool GetFlag(string flagname, bool defaultFailureReturn = false)
+    {
+        if(stateData != null)
+        {
+            if (stateData.Flags.ContainsKey(flagname))
+            {
+                return stateData.Flags[flagname];
+            }
+            else
+            {
+                Debug.LogWarning("Requested flag: " + flagname + " does not exist.");
+                return defaultFailureReturn;
+            }
+        }
+        else
+        {
+
+            Debug.LogError("StateSaver: StateData is null!");
+            return defaultFailureReturn;
+        }
     }
     #endregion
 }
