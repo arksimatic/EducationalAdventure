@@ -32,6 +32,28 @@ public class JigsawPuzzleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        //Difficulty settings
+        if(Difficulty.diff == DIFFICULTY.EASY)
+        {
+            jigsawPuzzleCount.x = 3;
+            jigsawPuzzleCount.y = 3;
+        }
+        else if(Difficulty.diff == DIFFICULTY.MEDIUM)
+        {
+
+            jigsawPuzzleCount.x = 5;
+            jigsawPuzzleCount.y = 5;
+        }
+        else if (Difficulty.diff == DIFFICULTY.HARD)
+        {
+
+            jigsawPuzzleCount.x = 7;
+            jigsawPuzzleCount.y = 7;
+        }
+
+
+
         //calculate one piece's texture size
         Vector2Int texSize = new Vector2Int(Mathf.FloorToInt((float)inputImage.width / (float)jigsawPuzzleCount.x),
         Mathf.FloorToInt((float)inputImage.height / (float)jigsawPuzzleCount.y));
