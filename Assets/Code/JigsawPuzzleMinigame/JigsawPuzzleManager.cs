@@ -72,7 +72,7 @@ public class JigsawPuzzleManager : MonoBehaviour
             for (int j = 0; j < jigsawPuzzleCount.y; j++)
             {
                 //Create puzzle piece
-                GameObject puzzlePiece = Instantiate(piecePrefab);
+                GameObject puzzlePiece = Instantiate(piecePrefab, unusedPuzzlePieceContainer);
 
                 //get portion of a main picture to assign it as a texture for our new piece
                 Texture2D pieceTex = new Texture2D(texSize.x, texSize.y);
@@ -87,11 +87,10 @@ public class JigsawPuzzleManager : MonoBehaviour
                 puzzlePiece.GetComponent<JigsawPuzzlePiece>().SetChangeStateHandler(OnStateChanged);
                 puzzlePiece.GetComponent<JigsawPuzzlePiece>().SetUnusedContainer(unusedPuzzlePieceContainer);
                 puzzlePiece.GetComponent<JigsawPuzzlePiece>().puzzlePieceID = (i * jigsawPuzzleCount.x) + j;
-                puzzlePiece.transform.SetParent(unusedPuzzlePieceContainer);
 
                 //Create puzzle socket
-                GameObject puzzleSocket = Instantiate(socketPrefab);
-                puzzleSocket.transform.SetParent(puzzleSocketContainer);
+                GameObject puzzleSocket = Instantiate(socketPrefab, puzzleSocketContainer);
+                //puzzleSocket.transform.localScale = new Vector3(1, 1, 1);
                 puzzleSocket.GetComponent<JigsawPuzzleSocket>().ExcpectedPuzzleID = (jigsawPuzzleCount.x - i - 1) + (j * jigsawPuzzleCount.y);
                 jigsawPuzzleSockets.Add(puzzleSocket.GetComponent<JigsawPuzzleSocket>());
 
