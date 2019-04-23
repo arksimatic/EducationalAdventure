@@ -150,7 +150,7 @@ RectTransform:
   m_AnchorMin: {x: 0.8045633, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.30000305, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &296758246
 MonoBehaviour:
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8537efc844fa69eb959c999ef45b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputImage: {fileID: 2800000, guid: e375ad0ce74e624eb87b0368f5b386c7, type: 3}
+  inputImage: {fileID: 2800000, guid: 0db7bd0ebb52c20ae9fb7264b4befcb8, type: 3}
   jigsawPuzzleCount: {x: 5, y: 5}
   unusedPuzzlePieceContainer: {fileID: 438044308}
   puzzleSocketContainer: {fileID: 651797903}

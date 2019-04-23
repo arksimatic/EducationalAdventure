@@ -35,7 +35,7 @@ public class JigsawPuzzlePiece : MonoBehaviour, IEndDragHandler, IBeginDragHandl
     public void OnBeginDrag(PointerEventData eventData)
     {
         parentbuffer = transform.parent;
-        transform.SetParent(unusedContainer.parent);
+        transform.SetParent(unusedContainer.parent.parent);
     }
 
     //TODO: Simplify the code, because it is a total fucking mess
