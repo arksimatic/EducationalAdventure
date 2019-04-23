@@ -38,6 +38,7 @@ public class JigsawPuzzlePiece : MonoBehaviour, IEndDragHandler, IBeginDragHandl
         transform.SetParent(unusedContainer.parent);
     }
 
+    //TODO: Simplify the code, because it is a total fucking mess
     public void OnEndDrag(PointerEventData eventData)
     {
         //Check if this object is overlapping with another object that has JigsawPuzzleSocket script attached
@@ -67,7 +68,7 @@ public class JigsawPuzzlePiece : MonoBehaviour, IEndDragHandler, IBeginDragHandl
                 embbededIn.Piece.embbededIn = null;
                 embbededIn.Piece.transform.SetParent(parentbuffer);
                 embbededIn.Piece.transform.position = parentbuffer.transform.position;
-
+                //If it happens that the lastest parent was a puzzle socket, exchange field information too.
                 if (parentbuffer.GetComponent<JigsawPuzzleSocket>())
                 {
                     parentbuffer.GetComponent<JigsawPuzzleSocket>().Piece = embbededIn.Piece;
@@ -77,14 +78,13 @@ public class JigsawPuzzlePiece : MonoBehaviour, IEndDragHandler, IBeginDragHandl
             }
             else
             {
-                Debug.Log("ELSE");
                 //set position to socket position, to achieve "snap" effect
                 transform.position = result.gameObject.transform.position;
                 //set parent
                 transform.SetParent(result.gameObject.transform);
             }
+
             //Set fields
-           
             embbededIn.Piece = this;
         }
         else

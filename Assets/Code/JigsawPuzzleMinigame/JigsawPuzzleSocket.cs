@@ -10,25 +10,12 @@ public class JigsawPuzzleSocket : MonoBehaviour
 
     //Default value ! means error
     public int ExcpectedPuzzleID = -1;
+
     public JigsawPuzzlePiece Piece
     {
         get { return piece; }
-        set { piece = value; OnLetterChanged(); }
+        set { piece = value; }
     }
-
     private JigsawPuzzlePiece piece;
-
-
-
-
-    void Start()
-    {
-       
-    }
-
-    void OnLetterChanged()
-    {
-      
-    }
 }
 

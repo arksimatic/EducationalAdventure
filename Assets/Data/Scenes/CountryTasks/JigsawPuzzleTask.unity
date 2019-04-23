@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8537efc844fa69eb959c999ef45b3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputImage: {fileID: 2800000, guid: af1a7fc0044d24df398b7fd94ce5e46b, type: 3}
+  inputImage: {fileID: 2800000, guid: e375ad0ce74e624eb87b0368f5b386c7, type: 3}
   jigsawPuzzleCount: {x: 5, y: 5}
   unusedPuzzlePieceContainer: {fileID: 132768010}
   puzzleSocketContainer: {fileID: 651797903}

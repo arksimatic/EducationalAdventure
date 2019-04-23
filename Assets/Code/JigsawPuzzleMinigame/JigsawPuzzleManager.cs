@@ -64,13 +64,13 @@ public class JigsawPuzzleManager : MonoBehaviour
                 //Set fields
                 puzzlePiece.GetComponent<JigsawPuzzlePiece>().SetChangeStateHandler(OnStateChanged);
                 puzzlePiece.GetComponent<JigsawPuzzlePiece>().SetUnusedContainer(unusedPuzzlePieceContainer);
-                puzzlePiece.GetComponent<JigsawPuzzlePiece>().puzzlePieceID = (i + 1) * (j + 1);
+                puzzlePiece.GetComponent<JigsawPuzzlePiece>().puzzlePieceID = (i * jigsawPuzzleCount.x) + j;
                 puzzlePiece.transform.SetParent(unusedPuzzlePieceContainer);
 
                 //Create puzzle socket
                 GameObject puzzleSocket = Instantiate(socketPrefab);
                 puzzleSocket.transform.SetParent(puzzleSocketContainer);
-                puzzleSocket.GetComponent<JigsawPuzzleSocket>().ExcpectedPuzzleID = (i + 1) * (j + 1);
+                puzzleSocket.GetComponent<JigsawPuzzleSocket>().ExcpectedPuzzleID = (jigsawPuzzleCount.x - i - 1) + (j * jigsawPuzzleCount.y);
                 jigsawPuzzleSockets.Add(puzzleSocket.GetComponent<JigsawPuzzleSocket>());
 
             }
@@ -94,7 +94,7 @@ public class JigsawPuzzleManager : MonoBehaviour
     {
         //Todo: Win screen?
         Debug.Log("Win");
-        SceneChanger.instance.ChangeSceneOnWin("school_scene");
+        SceneChanger.instance.ChangeSceneOnWin("country_scene");
         StateSaver.instance.SetFlag("minigame_jigsaw", true);
     }
 
