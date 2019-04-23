@@ -7,10 +7,9 @@ using UnityEngine.UI;
 
 public class JigsawPuzzleSocket : MonoBehaviour
 {
-    int puzzlePieceID;
 
     //Default value ! means error
-    public int ExcpectedID = -1;
+    public int ExcpectedPuzzleID = -1;
     public JigsawPuzzlePiece Piece
     {
         get { return piece; }

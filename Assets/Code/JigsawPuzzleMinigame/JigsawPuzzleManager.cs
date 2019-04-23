@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 
 public class JigsawPuzzleManager : MonoBehaviour
@@ -9,7 +10,6 @@ public class JigsawPuzzleManager : MonoBehaviour
     //Image that will be devided into puzzles
     [SerializeField]
     Texture2D inputImage;
-
 
     //Describes how many puzzles there will be in x and y axises
     [SerializeField]
@@ -26,6 +26,8 @@ public class JigsawPuzzleManager : MonoBehaviour
 
     [SerializeField]
     GameObject piecePrefab;
+
+    List<JigsawPuzzleSocket> jigsawPuzzleSockets = new List<JigsawPuzzleSocket>();
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +51,7 @@ public class JigsawPuzzleManager : MonoBehaviour
             {
                 //Create puzzle piece
                 GameObject puzzlePiece = Instantiate(piecePrefab);
+                
                 puzzlePiece.GetComponent<JigsawPuzzlePiece>().puzzlePieceID = (i + 1) * (j + 1);
                 puzzlePiece.transform.SetParent(unusedPuzzlePieceContainer);
                 //get portion of a main picture to assign it as a texture for our new piece
@@ -59,18 +62,38 @@ public class JigsawPuzzleManager : MonoBehaviour
 
                 //Set texture for piece
                 puzzlePiece.GetComponent<Image>().sprite = Sprite.Create(pieceTex, new Rect(0.0f, 0.0f, pieceTex.width, pieceTex.height), new Vector2(0.5f, 0.5f));
+                puzzlePiece.GetComponent<JigsawPuzzlePiece>().SetChangeStateHandler(OnStateChanged);
 
 
                 //Create puzzle socket
                 GameObject puzzleSocket = Instantiate(socketPrefab);
                 puzzleSocket.transform.SetParent(puzzleSocketContainer);
-
-
+                puzzleSocket.GetComponent<JigsawPuzzleSocket>().ExcpectedPuzzleID = (i + 1) * (j + 1);
+                jigsawPuzzleSockets.Add(puzzleSocket.GetComponent<JigsawPuzzleSocket>());
 
             }
         }
 
 
+    }
+
+    void OnStateChanged()
+    {
+        if (jigsawPuzzleSockets.All(x => x.Piece != null) == true)
+        {
+            if (jigsawPuzzleSockets.All(x => x.Piece.puzzlePieceID == x.ExcpectedPuzzleID) == true)
+            {
+                Win();
+            }
+        }
+    }
+
+    void Win()
+    {
+        //Todo: Win screen?
+        Debug.Log("Win");
+        SceneChanger.instance.ChangeSceneOnWin("school_scene");
+        StateSaver.instance.SetFlag("minigame_jigsaw", true);
     }
 
 }

@@ -20,16 +20,9 @@ public class JigsawPuzzlePiece : MonoBehaviour, IEndDragHandler, IBeginDragHandl
 
     Action changeStateHandler;
 
-
-    public void Init(Transform _container, Action _changedStateHandler)
+    public void SetChangeStateHandler(Action _handler)
     {
-
-        container = _container;
-
-
-        //Randomize some look
-        backgroundImage.color = UnityEngine.Random.ColorHSV(0, 1, 0, 0.5f, 1, 1);
-        changeStateHandler = _changedStateHandler;
+        changeStateHandler = _handler;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
