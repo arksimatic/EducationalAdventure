@@ -26,7 +26,6 @@ public class GoToPointScript : MonoBehaviour
     {
         pathfinding = GameObject.Find("Astar").GetComponent<PathFinding>();
         targetCheck = target.transform.position;
-        OnPath(pathfinding.FindPath(transform.position, target.position));
     }
 
     void Update()

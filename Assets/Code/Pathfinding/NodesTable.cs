@@ -40,6 +40,7 @@ public class NodesTable : MonoBehaviour
     public List<Node> path;
     private float nodeDiameter;
     private int gridSizeX, gridSizeY;
+    bool rescale = false;
 
     void Start()
     {
@@ -59,11 +60,21 @@ public class NodesTable : MonoBehaviour
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (i * nodeDiameter + nodeRadius) +
                                      Vector3.up * (j * nodeDiameter + nodeRadius);
                 bool walkable = !(Physics2D.OverlapBox(worldPoint,new Vector2(nodeRadius,nodeRadius),0.0f,UnWalkableMask));
-                grid[i,j]=new Node(walkable,worldPoint,i,j);
+                grid[i,j]= new Node(walkable,worldPoint,i,j);
             }
         }
 
     }
+
+    void Update()
+    { 
+        if(rescale == false)
+        {
+            rescale = true;
+            CreateGrid();
+        }
+    }
+
     public List<Node> GetNeighbours(Node node)//zawsze dbbrze jest miec sasiada:D, szuka sasiadów noda potrzebne wwyszukiwaniu drogi.
     {
         List<Node> neighbours = new List<Node>();

@@ -39,10 +39,9 @@ public class SceneScaler : MonoBehaviour
 
         Vector2 scaleMultiplier = new Vector2(cameraSize.size.x / bounds.size.x, cameraSize.size.y / bounds.size.y);
 
-
         this.transform.localScale *= scaleMultiplier;
 
-
+        //After transforming scene recreate pathfinding grid
 
 
     }
