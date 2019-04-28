@@ -6,7 +6,11 @@ using UnityEngine.UI;
 
 public class SettingPhrases : MonoBehaviour
 {
-    public Text Word = null;
+    //public Text Word = null;
+
+    public Text Word = null; 
+
+
     public static string[] j = new string[150];
     public static string[] m = new string[150];
     public static string word = null;
@@ -15,12 +19,12 @@ public class SettingPhrases : MonoBehaviour
 
     //TODO: Add new difficulty levels
     public static readonly string[] difficulties = new string[] { "klasa1", "klasa1", "klasa1" };
+    //public static string level = difficulties[(int)Difficulty.diff];  //addinational string for more clean code
+    public static string level = "klasa1";  //just for testing, delete and turn on the line above
 
-
-
-    public static void Draw(Text Word)
+    public void Draw(Text Word)
     {
-        string text = Resources.Load<TextAsset>(difficulties[(int)Difficulty.diff]).text;
+        string text = Resources.Load<TextAsset>(level).text;
         StringReader reader = new StringReader(text);
         reader.Close();
 
@@ -45,20 +49,21 @@ public class SettingPhrases : MonoBehaviour
 
     public void DrawEveryone()
     {
+        Debug.Log("turning on drawing");
         Draw(Word);
     }
 
 
     void Start()
     {
-        string anwsers = Resources.Load<TextAsset>(difficulties[(int)Difficulty.diff] + "odp").text;
+        string anwsers = Resources.Load<TextAsset>(level + "odp").text;
 
         StringReader readerodp = new StringReader(anwsers);
         m[0] = "a";
         for (int i = 1; m[i-1] != null; i++)
         {
             m[i] = readerodp.ReadLine();
-            //Debug.Log(i + "m");
+            //Debug.Log(i + "m" + m[i]);
         }
         readerodp.Close();
 
