@@ -1,0 +1,425 @@
+fileFormatVersion: 2
+guid: 59b1190d0ed011b41a00707e50c5a01a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: papuga - osobno_0
+    21300002: papuga - osobno_1
+    21300004: papuga - osobno_2
+    21300006: papuga - osobno_3
+    21300008: papuga - osobno_4
+    21300010: papuga - osobno_5
+    21300012: papuga - osobno_6
+    21300014: papuga - osobno_7
+    21300016: papuga - osobno_8
+    21300018: papuga - osobno_9
+    21300020: papuga - osobno_10
+    21300022: papuga - osobno_11
+    21300024: papuga - osobno_12
+    21300026: papuga - osobno_13
+    21300028: papuga - osobno_14
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: papuga - osobno_0
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1534
+        width: 732
+        height: 1058
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcdfc1e30bbbe94da1f02c8657fa198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_1
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 2377
+        width: 510
+        height: 343
+      alignment: 9
+      pivot: {x: 0.4322438, y: 0.29850924}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575958d5855d4e44082f2c6c56e97fee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_2
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 2500
+        width: 110
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c258a39c1519f964496504b3da0dc6e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_3
+      rect:
+        serializedVersion: 2
+        x: 2050
+        y: 2483
+        width: 111
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fffebf794e0d33c4e9e07c92ef45c947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_4
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 2518
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68d250e9b04f854da3f174b61b5b987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_5
+      rect:
+        serializedVersion: 2
+        x: 2939
+        y: 1793
+        width: 1025
+        height: 734
+      alignment: 9
+      pivot: {x: 0.025522342, y: 0.9497895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f6b9286577e344090c1e4013a17ba7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_6
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1104
+        width: 208
+        height: 252
+      alignment: 9
+      pivot: {x: 0.9430218, y: 0.77425176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a898f59c171e2ec4c87158ef08f3210c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_7
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1173
+        width: 184
+        height: 304
+      alignment: 9
+      pivot: {x: 0.625202, y: 0.9041603}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5b0d38b34ec8b4e8768e75b8b4ca66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_8
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1180
+        width: 186
+        height: 295
+      alignment: 9
+      pivot: {x: 0.5825701, y: 0.8904599}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05abfd2a74df7f24d8fc95e13ba93844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_9
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1350
+        width: 835
+        height: 668
+      alignment: 9
+      pivot: {x: 0.049373567, y: 0.07466391}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82a98bd9670e404ea7f89f067c26a46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_10
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 755
+        width: 835
+        height: 667
+      alignment: 9
+      pivot: {x: 0.07696278, y: 0.07978246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db431dcbb2f45c543835d694202c174d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_11
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 872
+        width: 167
+        height: 82
+      alignment: 9
+      pivot: {x: 0.86785835, y: 0.5000007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326d429d16d31d742a60822d337528b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_12
+      rect:
+        serializedVersion: 2
+        x: 1999
+        y: 897
+        width: 803
+        height: 354
+      alignment: 9
+      pivot: {x: 0.06488607, y: 0.8145373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80c39488b56e1e4895aae4f918072f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_13
+      rect:
+        serializedVersion: 2
+        x: 2050
+        y: 62
+        width: 457
+        height: 803
+      alignment: 9
+      pivot: {x: 0.18074046, y: 0.9016436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f731ee7d3502c2d419a7b5d6eaafd719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: papuga - osobno_14
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 442
+        width: 846
+        height: 237
+      alignment: 9
+      pivot: {x: 0.059771165, y: 0.75920886}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0029530d58bae444a1a906cb6b3120b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 722ef2eb0447b7e4a9cd46b5bf79ad7b
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
